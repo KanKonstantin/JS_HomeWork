@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+   <p> Необходимо реализовать четыре функции, каждая функция должна принимать по два <br>
+    числа и выполнять одну из операций (каждая функция выполняет одну из них):<br>
+    1. Сложение<br>
+    2. Разность<br>
+    3. Умножение<br>
+    4. Деление<br>
+
+    Необходимо сделать так, чтобы функция вернула число, например выражение<br>
+    console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция<br>
+    сложения в данном примере, ваши названия функций могут отличаться).<br>
+
+    Округлять значения, которые возвращают функции не нужно, однако, обратите<br>
+    внимание на разность, функция должна вычесть из большего числа меньшее, либо<br>
+    вернуть 0, если числа равны.<br>
+
+    Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать<br>
+    не нужно.
+    </p>
+    
+    <script>
+       const userNumber = Number(prompt('Введите первое число'));
+       const userNumber2 = Number(prompt('Введите второе число'));
+
+       function sum() {
+           const userSum = userNumber + userNumber2;
+           console.log(userSum);
+       }
+       function subtraction() {
+           if (userNumber > userNumber2) {
+               const userSub = userNumber - userNumber2;
+               console.log(userSub);
+           } else if (userNumber < userNumber2) {
+               const userSub = userNumber2 - userNumber;
+               console.log(userSub);
+           } else {
+               const userSub = 0;
+               console.log(userSub);
+           }
+       }
+       function multiplication() {
+           const userMult = userNumber * userNumber2;
+           console.log(userMult);
+       }
+       function division() {
+           const userDiv = userNumber / userNumber2;
+           console.log(userDiv);
+       }
+
+       sum ();
+       subtraction ();
+       multiplication ();
+       division ();
+
+    </script>
+</body>
+</html>
