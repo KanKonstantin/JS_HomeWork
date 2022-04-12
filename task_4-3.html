@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+   <ol>
+       <li>Создайте массив, состоящий из 5 элементов. (Элементами массива должны быть произвольные цифры в диапазоне от 0 до 10.)</li>
+       <li>Удалите значение 3, если будет такое значение.</li>
+       <li>Каждое значение исходного элемента массива необходимо увеличить на 10%.</li>
+       <li>Выведите в консоль два этих массива.</li>
+   </ol>
+    
+    <script>
+       const arr = [];
+       for (let i = 0; i < 10; i++) {
+           arr.push(Math.round(Math.random() * 10));
+           }
+
+        console.log(arr.filter (item => (item !== 3)));
+        console.log(arr.map(arrItem => arrItem += arrItem * 0.1));
+    </script>
+</body>
+</html>
